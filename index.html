@@ -4,28 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Music</title>
+    <link rel="stylesheet" href="./open-music/styles/albums.css" />
+    <link rel="stylesheet" href="./open-music/styles/filters.css" />
+    <link rel="stylesheet" href="./open-music/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./open-music/styles/header.css" />
+    <link rel="stylesheet" href="./open-music/styles/reset.css" />
   </head>
   <body>
     <!-- CABEÇALHO -->
-    <header>
+    <header class="header">
       <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
+      <h1 class="logo"><span>open</span> music</h1>
+      <button class="theme-toggle" aria-label="Alterar tema"></button>
     </header>
+    <div class="header-line"></div>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <!-- SEÇÃO DE FILTRO POR GENERO -->
       <section>
         <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h2>Gênero Musical</h2>
+        <div class="genre-buttons">
+        <button class="genre-btn active">Todos</button>
+        <button class="genre-btn">Pop</button>
+        <button class="genre-btn">MPB</button>
+        <button class="genre-btn">Forró</button>
+        <button class="genre-btn">Samba</button>
+        <button class="genre-btn">Baião</button>
+        <button class="genre-btn">Rap</button>
+        <button class="genre-btn">Hip-Hop</button>
+  </div>
       </section>
-
       <!-- SEÇÃO DE FILTRO POR PREÇO -->
-      <section>
+      <section class="filter-price">
         <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h2>Definir Preço</h2>
+        <label for="priceRange">Até R$ <span id="priceValue">100</span></label>
+        <input type="range" id="priceRange" name="priceRange" min="0" max="100" value="100" step="1">
       </section>
 
       <!-- SEÇÃO DE ALBUNS -->
-      <section>
+      <section class="album-section">
         <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
+        <h2>Álbuns Encontrados</h2>
+        <ul class="album-list">
+          <li class="album-card">
+            <img src="./open-music/assets/images/cover-1.png" alt="Capa do álbum 1">
+            <h3>Acabou o Chorare</h3>
+            <span class="artist">Novos Baianos</span>
+            <span class="genre">MPB</span>
+            <p class="price">R$ 137,91</p>
+            <button class="buy-btn">Comprar</button>
+          </li>
+          <li class="album-card">
+            <img src="./open-music/assets/images/cover-2.png" alt="Capa do álbum 2">
+            <h3>The Wall</h3>
+            <span class="artist">Pink Floyd</span>
+            <span class="genre">Rock</span>
+            <p class="price">R$ 123,56</p>
+            <button class="buy-btn">Comprar</button>
+          </li>
+          <li class="album-card">
+            <img src="./open-music/assets/images/cover-3.png" alt="Capa do álbum 3">
+            <h3>To Pimp a Butterfly</h3>
+            <span class="artist">Kendrick Lamar</span>
+            <span class="genre">Rap</span>
+            <p class="price">R$ 102,66</p>
+            <button class="buy-btn">Comprar</button>
+          </li>
+          <li class="album-card">
+            <img src="./open-music/assets/images/cover-1.png" alt="Capa do álbum 4">
+            <h3>Acabou o Chorare</h3>
+            <span class="artist">Novos Baianos</span>
+            <span class="genre">MPB</span>
+            <p class="price">R$ 137,91</p>
+            <button class="buy-btn">Comprar</button>
+          </li>
+          <li class="album-card">
+            <img src="./open-music/assets/images/cover-2.png" alt="Capa do álbum 5">
+            <h3>The Wall</h3>
+            <span class="artist">Pink Floyd</span>
+            <span class="genre">Rock</span>
+            <p class="price">R$ 123,56</p>
+            <button class="buy-btn">Comprar</button>
+          </li>
+          <li class="album-card">
+            <img src="./open-music/assets/images/cover-3.png" alt="Capa do álbum 6">
+            <h3>To Pimp a Butterfly</h3>
+            <span class="artist">Kendrick Lamar</span>
+            <span class="genre">Rap</span>
+            <p class="price">R$ 102,66</p>
+            <button class="buy-btn">Comprar</button>
+          </li>
+        </ul>
       </section>
     </main>
   </body>

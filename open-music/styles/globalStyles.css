@@ -1,0 +1,35 @@
+/* Estilizações Globais */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root {
+    --color-brand-1: #6F00FF;
+    --color-brand-2: #8629FF;
+    --gray-1: #15171A;
+    --gray-2: #212529;
+    --gray-3: #2B2F33;
+    --gray-4: #CED4DA;
+    --gray-5: #DEE2E6;
+    --gray-6: #F1F3F5;
+    --gray-7: #F8F9FA;
+    --gray-8: #FDFEFF;
+
+      /* Cores de texto */
+  --text-title: #212529;
+  --text-body: #495057;
+  --text-muted: #adb5bd;
+
+  /* Espaçamentos e tamanhos */
+  --container-max-width: 1024px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-white);
+  color: var(--text-body);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+  
