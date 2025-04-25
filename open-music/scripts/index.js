@@ -1,22 +1,68 @@
+import { applyInputRangeStyle } from "./js/inputRange.js";
+import { albumList } from "./js/albumsDatabase.js";
 
-  const priceInput = document.getElementById("priceRange");
-  const priceValue = document.getElementById("priceValue");
+// Função para criar um card individual de álbum
+function createAlbumCard(album) {
+  // Criando o elemento <div> para o card
+  const albumCard = document.createElement('div');
+  albumCard.classList.add('album-card');
 
-  function updatePriceUI() {
-    const max = parseInt(priceInput.max);
-    const min = parseInt(priceInput.min);
-    const value = parseInt(priceInput.value);
+  // Criando a imagem do álbum
+  const albumImage = document.createElement('img');
+  albumImage.src = album.img;
+  albumImage.alt = `Capa do álbum ${album.title}`;
+  albumImage.classList.add('album-image');
 
-    const percentage = ((value - min) / (max - min)) * 100;
+  // Criando a div para os detalhes do álbum
+  const albumDetails = document.createElement('div');
+  albumDetails.classList.add('album-details');
 
-    // Atualiza o número
-    priceValue.textContent = value;
+  // Título do álbum
+  const albumTitle = document.createElement('h3');
+  albumTitle.textContent = album.title;
+  albumDetails.appendChild(albumTitle);
 
-    // Atualiza o fundo da barra com gradiente
-    priceInput.style.background = `linear-gradient(to right, #820ad1 ${percentage}%, #e1e1e1 ${percentage}%)`;
-  }
+  // Banda do álbum
+  const albumBand = document.createElement('p');
+  albumBand.textContent = `Banda: ${album.band}`;
+  albumDetails.appendChild(albumBand);
 
-  updatePriceUI();
+  // Gênero do álbum
+  const albumGenre = document.createElement('p');
+  albumGenre.textContent = `Gênero: ${album.genre}`;
+  albumDetails.appendChild(albumGenre);
 
-  priceInput.addEventListener("input", updatePriceUI);
+  // Preço do álbum
+  const albumPrice = document.createElement('p');
+  albumPrice.textContent = `Preço: R$ ${album.price}`;
+  albumDetails.appendChild(albumPrice);
 
+  // Botão de compra
+  const buyButton = document.createElement('button');
+  buyButton.classList.add('buy-btn');
+  buyButton.textContent = 'Comprar';
+  albumDetails.appendChild(buyButton);
+
+  // Adicionando os elementos no card
+  albumCard.appendChild(albumImage);
+  albumCard.appendChild(albumDetails);
+
+  return albumCard;
+}
+
+// Função para exibir os cards na página
+function displayAlbumCards() {
+  const container = document.querySelector('.album-container'); // Pega o contêiner onde os cards serão inseridos
+
+  // Limpando qualquer conteúdo anterior no container
+  container.innerHTML = '';
+
+  // Criando os cards para cada álbum no array albumList
+  albumList.forEach(album => {
+    const card = createAlbumCard(album);
+    container.appendChild(card); // Adiciona o card no contêiner
+  });
+}
+
+// Chama a função para renderizar os cards assim que o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', displayAlbumCards);
