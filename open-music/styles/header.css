@@ -1,38 +1,82 @@
 .header {
+    position: sticky;
+    top: 0;
+    left: 45.4px;  
+    width: 1024px;  
+    height: 144px;  
+    max-width: 1024px; 
+    background-color: var(--gray-8); 
+    z-index: 1000;
+    padding-top: 48px;  
+    padding-bottom: 48px;  
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    border-bottom: 3px solid var(--color-brand-2); 
+
+  }
+  .price-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    margin-bottom: 1rem;
   }
   
-  .logo {
-    font-size: 1.5rem;
+  .price-header h2 {
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--text-title);
   }
   
-  .logo span {
-    color: var(--color-primary); /* "open" roxo */
+  .price-header-span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var( --gray-1);
   }
+  .logo {
+    font-family: Inter;
+font-weight: 600;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0%;
+
+  }
+  
+  .header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .header button img {
+    width: 24px;
+    height: 24px;
+  }
+  
   
   .theme-toggle {
-    width: 32px;
-    height: 32px;
-    background-image: url('../open-music/assets/icons/Lua.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 18px 18px;
-    background-color: var(--color-light);
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-image 0.3s ease;
+width: 44;
+height: 36;
+padding-top: 9px;
+padding-right: 14px;
+padding-bottom: 9px;
+padding-left: 14px;
+gap: 10px;
+border-radius: 5px;
+
   }
   
-
-  .header-line {
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-primary);
-    margin: 1rem 0;
-  }
+.title2{
+    width: 1024;
+    height: 61;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;    
+font-family: Inter;
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: var(--color-gray-2);
+}

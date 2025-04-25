@@ -22,6 +22,10 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+
+  .album-card:hover {
+    transform: scale(1.02);
+  }
   
   .album-card img {
     border-radius: 4px;
@@ -52,17 +56,21 @@
     margin-top: auto;
   }
   
-  .buy-btn {
-    background-color: #9747ff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
+    .buy-btn {
+      margin-top: 0.5rem;
+      background-color: var(--brand-color);
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
   
-  .buy-btn:hover {
-    background-color: #7b3bcb;
-  }
+.buy-btn:hover {
+  background-color: var(--brand-color-dark);
+}
+  
   

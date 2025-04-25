@@ -30,6 +30,21 @@ body {
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 2rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Modo escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+.highlight {
+  color: var(--color-brand-1);
+}
+.valorMax{
+  color: var(--color-brand-1);
+}
+
 
   

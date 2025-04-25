@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open Music</title>
+    <title> Open Music </title>
     <link rel="stylesheet" href="./open-music/styles/albums.css" />
     <link rel="stylesheet" href="./open-music/styles/filters.css" />
     <link rel="stylesheet" href="./open-music/styles/globalStyles.css" />
@@ -14,35 +14,49 @@
     <!-- CABEÇALHO -->
     <header class="header">
       <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
-      <h1 class="logo"><span>open</span> music</h1>
-      <button class="theme-toggle" aria-label="Alterar tema"></button>
+      <h1 class="logo"><span class="highlight">o</span>pen <span class="highlight">m</span>usic</h1>
+      <button id="darkModeButton">
+        <img src="./open-music/assets/icons/Lua.png" alt="Ícone de modo escuro">
+      </button>
     </header>
-    <div class="header-line"></div>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
       <!-- SEÇÃO DE FILTRO POR GENERO -->
       <section>
         <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-        <h2>Gênero Musical</h2>
-        <div class="genre-buttons">
-        <button class="genre-btn active">Todos</button>
-        <button class="genre-btn">Pop</button>
-        <button class="genre-btn">MPB</button>
-        <button class="genre-btn">Forró</button>
-        <button class="genre-btn">Samba</button>
-        <button class="genre-btn">Baião</button>
-        <button class="genre-btn">Rap</button>
-        <button class="genre-btn">Hip-Hop</button>
-  </div>
-      </section>
-      <!-- SEÇÃO DE FILTRO POR PREÇO -->
-      <section class="filter-price">
-        <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
-        <h2>Definir Preço</h2>
-        <label for="priceRange">Até R$ <span id="priceValue">100</span></label>
-        <input type="range" id="priceRange" name="priceRange" min="0" max="100" value="100" step="1">
-      </section>
+        <h2 class="title2">Gênero Musical</h2>
+        <div class="genre-options">
+          <input type="radio" name="genre" id="all" value="all" checked hidden />
+          <label for="all">Todos</label>
+      
+          <input type="radio" name="genre" id="rock" value="rock" hidden />
+          <label for="rock">Rock</label>
+      
+          <input type="radio" name="genre" id="pop" value="pop" hidden />
+          <label for="pop">Pop</label>
+      
+          <input type="radio" name="genre" id="mpb" value="mpb" hidden />
+          <label for="mpb">MPB</label>
+      
+          <input type="radio" name="genre" id="samba" value="samba" hidden />
+          <label for="samba">Samba</label>
+        </div>
+  <section class="filter-price">
+    <div class="price-header">
+      <h2>Definir Preço</h2>
+      <span class="price-header-span">Até R$ <span id="priceValue" class="valorMax">100</span></span>
+    </div>
+    <input
+      type="range"
+      id="priceRange"
+      name="priceRange"
+      min="0"
+      max="100"
+      value="100"
+      step="1"
+    />
+  </section>
 
       <!-- SEÇÃO DE ALBUNS -->
       <section class="album-section">
@@ -100,5 +114,16 @@
         </ul>
       </section>
     </main>
+
+    <!-- Script do dark mode -->
+    <script>
+      // Acha o botão de dark mode
+      const darkModeButton = document.getElementById('darkModeButton');
+
+      // Adiciona ou remove a classe "dark-mode" no body ao clicar no botão
+      darkModeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
   </body>
 </html>

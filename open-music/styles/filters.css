@@ -1,77 +1,177 @@
-.filter-section, .price-section {
-    margin-top: 2rem;
-    padding: 1rem 2rem;
+.filter-price {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-price label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.valorMax {
+  color: #820ad1;
+}
+
+/* botões */
+.genre-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.genre-options input[type="radio"] {
+  display: none;
+}
+
+.genre-options label {
+  background-color: var(--gray-6);
+  color: var(--gray-1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+
+.genre-options input[type="radio"]:checked + label {
+  background-color: var(--color-brand-1);
+  color: #fff;
+}
+
+  .genre-buttons button:hover {
+    background-color: var(--brand-color-light);
   }
   
-  h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  .genre-btn-active{
+      width: 70.4000015258789;
+  height: 32;
+  padding-top: 10.2px;
+  padding-right: 11.2px;
+  padding-bottom: 10.2px;
+  padding-left: 11.2px;
+  gap: 10px;
+  border-radius: 4px;
+  }
+    
+  .genre-btn-pop{
+      width: 52.400001525878906;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
   
-  .genre-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  .genre-btn-mpb{
+      width: 58.400001525878906;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
   
-  .genre-btn {
-    background-color: #f3f3f3;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: background 0.3s;
+  .genre-btn-forro{
+      width: 62.400001525878906;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
   
-  .genre-btn:hover {
-    background-color: #e0e0e0;
+  .genre-btn-samba{
+      width: 75.4000015258789;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
   
-  .genre-btn.active {
-    background-color: #1e1e1e;
-    color: white;
+  .genre-btn-baião{
+      width: 65.4000015258789;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
   
-  .price-section .price-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+  .genre-btn-rap{
+      width: 52.400001525878906;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
-  
-  .price-value {
-    color: #9747ff;
+  .genre-btn-hiphop{
+      width: 87.4000015258789;
+      height: 32;
+      padding-top: 10.2px;
+      padding-right: 11.2px;
+      padding-bottom: 10.2px;
+      padding-left: 11.2px;
+      gap: 10px;
+      border-radius: 4px;
+      
   }
-  
-  /* Input range personalizado */
-  input[type="range"] {
-    width: 100%;
-    -webkit-appearance: none;
-    height: 6px;
-    background: #e0e0e0;
-    border-radius: 3px;
-    outline: none;
-  }
-  
-  input[type="range"]::-webkit-slider-thumb {
+
+  /* Selecionando o elemento input range (selecione por id ou classe) */
+
+  #priceRange {
     -webkit-appearance: none;
     appearance: none;
-    width: 18px;
-    height: 18px;
-    background: white;
-    border: 4px solid #9747ff;
-    border-radius: 50%;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, var(--color-brand-1) 0%, var(--color-brand-1) 100%);
+    border-radius: 5px;
+    outline: none;
     cursor: pointer;
+    transition: background 450ms ease-in;
   }
   
-  input[type="range"]::-moz-range-thumb {
-    width: 18px;
-    height: 18px;
-    background: white;
-    border: 4px solid #9747ff;
+  #priceRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 3px solid var(--color-brand-1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+  
+  #priceRange::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border: 3px solid var(--color-brand-1);
     border-radius: 50%;
     cursor: pointer;
   }
