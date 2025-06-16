@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="./open-music/styles/globalStyles.css" />
     <link rel="stylesheet" href="./open-music/styles/header.css" />
     <link rel="stylesheet" href="./open-music/styles/reset.css" />
+    
   </head>
   <body>
     <!-- CABEÇALHO -->
     <header class="header">
       <!-- DESENVOLVA AQUI OS ELEMENTOS DO CABEÇALHO -->
       <h1 class="logo"><span class="highlight">o</span>pen <span class="highlight">m</span>usic</h1>
-      <button id="darkModeButton">
-        <img src="./open-music/assets/icons/Lua.png" alt="Ícone de modo escuro">
-      </button>
+       <button id="darkModeButton">
+  <img src="./open-music/assets/icons/Lua.png" alt="Ícone de modo escuro">
+</button>
+
     </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
@@ -48,18 +50,20 @@
       <span class="price-header-span">Até R$ <span id="priceValue" class="valorMax">100</span></span>
     </div>
     <input
-      type="range"
-      id="priceRange"
-      name="priceRange"
-      min="0"
-      max="100"
-      value="100"
-      step="1"
+  type="range"
+  id="priceRange"
+  name="priceRange"
+  min="0"
+  max="200"
+  value="200"
+  step="1"
+
     />
   </section>
 
       <!-- SEÇÃO DE ALBUNS -->
       <section class="album-section">
+        
         <!-- DESENVOLVA AQUI OS ELEMENTOS DA SEÇÃO -->
         <h2>Álbuns Encontrados</h2>
         <div class="album-container"></div>
@@ -116,8 +120,10 @@
       </section>
     </main>
 
-      <script src="albumsDatabase.js"></script>
-      <script src="inputRange.js"></script>
-      <script src="index.js"></script>
+      <script type="module" src="./open-music/scripts/albumsDatabase.js"></script>
+      <script type="module" src="./open-music/scripts/inputRange.js"></script>
+      <script type="module" src="./open-music/scripts/index.js"></script>
+      <script type="module" src="./open-music/scripts/theme.js"></script>
+
   </body>
 </html>
